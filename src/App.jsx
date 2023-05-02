@@ -1,9 +1,12 @@
 import React from 'react';
+import Nav from './components/navBar/Nav';
 
 const App = () => {
   return (
-    <div >
-   <button className="btn btn-secondary">Button</button>
+    <div>
+      <Nav></Nav>
+      
+      
     </div>
   );
 };
