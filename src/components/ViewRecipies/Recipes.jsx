@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = ({ SingleRecipe }) => {
    console.log(SingleRecipe)
-   const { recipe_img
-      , recipeName, ingredients, cookingMethod, rating
+   const { recipe_img, recipeName, ingredients, cookingMethod, rating} = SingleRecipe
 
-   } = SingleRecipe
+const [disable,setdisable]=useState(false)
+
+const success =()=>{
+   toast.success('Added To Favourites !!', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+      setdisable(true)
+}
+
+
    return (
       <div className='mb-5 mt-2' >
          <div className="card bg-pink-50 grid md:grid-cols-2 md:w-5/6 md:mx-auto card-side  shadow-xl p-2 m-2 md:px-8">
@@ -26,10 +43,11 @@ const Recipes = ({ SingleRecipe }) => {
                <div className="card-actions  justify-center pt-3 flex ">
                   <p><span className='font-bold '>Rarings :</span> {rating}</p>
 
-                  <button type="button" className=" text-xs md:text-sm btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950" ><FaHeart></FaHeart> Favourite</button>
+                  <button type="button" onClick={success} disabled={disable} className=" text-xs md:text-sm btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950" ><FaHeart></FaHeart> Favourite</button>
                </div>
             </div>
          </div>
+         <ToastContainer />
       </div>
    );
 };
