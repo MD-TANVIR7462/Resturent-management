@@ -10,12 +10,14 @@ import MainHome from './components/Home/Main/MainHome.jsx';
 import Resister from './components/Resister/Resister.jsx';
 import Login from './components/Login/Login.jsx';
 import ViewRecipies from './components/ViewRecipies/ViewRecipies.jsx';
+import Error from './components/Error/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
