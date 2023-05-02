@@ -3,6 +3,7 @@ import Nav from './components/navBar/Nav';
 import MainHome from './components/Home/Main/MainHome';
 import Footer from './components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
+import './App.css';
 
 const App = () => {
   return (
