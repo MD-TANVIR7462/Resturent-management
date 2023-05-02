@@ -6,12 +6,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import MainHome from './components/Home/Main/MainHome.jsx';
+import Resister from './components/Resister/Resister.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    children:[
+      {
+        path:'/',
+        element:<MainHome></MainHome>
+      },
+      {
+        path:'/resister',
+        element:<Resister></Resister>
+      }
+    ]
   },
 ]);
 

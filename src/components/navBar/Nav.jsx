@@ -3,16 +3,16 @@ import { Link, NavLink } from 'react-router-dom';
 const Nav = () => {
    const user = true
    return (
-      <div>
+      <div className='bg-slate-50'>
          
-        <div className="navbar  px-2 md:px-28  h-20   ">      
+        <div className="navbar  px-2 md:px-28  h-20    ">      
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-semibold">
-              <li><NavLink to={'/'} className={  ({ isActive }) => isActive ? 'text-900 ' : 'text-black pl-4'}>  Home</NavLink ></li>
+              <li><NavLink to={'/'} className={  ({ isActive }) => isActive ? 'text-pink-800 ' : 'text-black pl-4'}>  Home</NavLink ></li>
 
               <li> <NavLink to={'/Blogs'} className={({ isActive }) => isActive ? " text-pink-800 pl-4" : "'text-black  pl-4 "}> Blog</NavLink></li>
               <li> <NavLink to={'/resister'} className={({ isActive }) => isActive ? " text-pink-800 pl-4" : "'text-black  pl-4 "}> Resister</NavLink></li>
@@ -40,7 +40,7 @@ const Nav = () => {
       //   </div>
       // </label>
 
-      user?<div className="dropdown dropdown-end">
+      user?<div className="dropdown dropdown-end" title='MD-Tanvir'>
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img src="https://i.ibb.co/X5Zdcgp/man.png" />

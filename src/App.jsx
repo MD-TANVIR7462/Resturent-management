@@ -2,12 +2,13 @@ import React from 'react';
 import Nav from './components/navBar/Nav';
 import MainHome from './components/Home/Main/MainHome';
 import Footer from './components/Footer/Footer';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className='w-11/12 mx-auto'>
+    <div className='md:w-11/12 w-full md:mx-auto'>
       <Nav></Nav>
-     <MainHome></MainHome>
+     <Outlet></Outlet>
      <Footer></Footer>
       
     </div>
