@@ -6,17 +6,17 @@ const Footer = () => {
          <footer className="footer p-10 bg-base-300 text-base-content ">
   <div>
     <span className="footer-title">Services</span> 
-    <a className="link link-hover">Branding</a> 
-    <a className="link link-hover">Design</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
+    <a className="link link-hover">Organaigarion</a> 
+    <a className="link link-hover">weadding Recipes</a> 
+    <a className="link link-hover">Open Days</a> 
+    <a className="link link-hover">Off Days</a>
   </div> 
   <div>
-    <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
+    <span className="footer-title">Info</span> 
+    <a className="link link-hover">All Recipes</a> 
+    <a className="link link-hover">Cold Drinks</a> 
+    <a className="link link-hover">Our Team</a> 
+    <a className="link link-hover">Food Prices</a>
   </div> 
   <div>
     <span className="footer-title">Social</span> 

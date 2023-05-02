@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaHome,FaBloggerB,FaSignInAlt } from 'react-icons/fa';
 const Nav = () => {
-   const user = true
+   const user = false
    return (
       <div className='bg-slate-50'>
          
@@ -53,7 +53,7 @@ const Nav = () => {
       </ul>
     </div>
       :
-<button type="button" className="text-xs md:text-base btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950">Login</button>
+<Link to={'/login'}><button type="button" className="text-xs md:text-base btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950">Login</button></Link>
        }
 
 
