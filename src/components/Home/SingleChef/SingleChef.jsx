@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SingleChef = ({ chef }) => {
    const { chefName, chefPicture, yearsOfExperience, numberOfRecipes, likes, id } = chef
    console.log(chef)
+   const navigate = useNavigate()
+   const View=()=>{
+    navigate(`/viewrecipies/${id}`)
+
+   }
    return (
       <>
 <div className="card md:w-80 bg-base-100 shadow-xl">
@@ -13,7 +19,7 @@ const SingleChef = ({ chef }) => {
     <p className='font-medium' ><span className='font-bold text-gray-600'>Recipes</span > : {numberOfRecipes} Recipes </p>
     <p className='font-medium' ><span className='font-bold text-gray-600'>Likes</span > : {likes} Likes </p>
     <div className="card-actions justify-start">
-    <button type="button" className="mt-4 text-xs md:text-sm btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950">View Recipes</button>
+    <button type="button" className="mt-4 text-xs md:text-sm btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950" onClick={View}>View Recipes</button>
     </div>
   </div>
 </div>

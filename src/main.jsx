@@ -9,6 +9,7 @@ import {
 import MainHome from './components/Home/Main/MainHome.jsx';
 import Resister from './components/Resister/Resister.jsx';
 import Login from './components/Login/Login.jsx';
+import ViewRecipies from './components/ViewRecipies/ViewRecipies.jsx';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/viewrecipies/:id',
+        element:<ViewRecipies></ViewRecipies>,
+        loader:({params})=>{return fetch(`https://ass-10-server-mdtanvir7462-gmailcom.vercel.app/${params.id}`)}
       },
     ]
   },
