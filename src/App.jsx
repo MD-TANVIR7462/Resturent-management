@@ -7,7 +7,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className='md:w-11/12 w-full md:mx-auto'>
+    <div className='md:w-11/12 w-full mx-auto md:mx-auto'>
       <Nav></Nav>
      <Outlet></Outlet>
      <Footer></Footer>

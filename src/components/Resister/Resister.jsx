@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContaxt } from '../Provider/AuthProviders';
 import { ToastContainer, toast } from 'react-toastify';
 import { getAuth, updateProfile } from "firebase/auth";
-import app from '../Firebase/firebase';
+import app from '../Firebase/firebase.init';
 
 const Resister = () => {
   const [error, seterror,] = useState('')

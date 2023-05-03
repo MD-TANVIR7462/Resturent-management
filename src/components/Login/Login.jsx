@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaGoogle, FaGithubAlt } from 'react-icons/fa';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { AuthContaxt } from '../Provider/AuthProviders';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -106,7 +106,7 @@ const navigate = useNavigate()
           <div className='flex justify-center gap-5'>
             <button onClick={googleSign} className='btn w-[120px] bg-gray-100 border-none text-black  shadow-md shadow-gray-500 hover:text-black hover:bg-white '><span className='text-green-600 text-xl pr-2'><FaGoogle></FaGoogle></span> Google</button>
 
-            <button onClick={GithubSign} className='w-[120px] btn  bg-gray-700 border-none text-white  shadow-md shadow-gray-500 hover:text-white '> <span className='text-blue-600 text-xl pr-2'><FaGithubAlt></FaGithubAlt></span>Github</button>
+            <button onClick={GithubSign} className='w-[120px] btn  bg-gray-700 border-none text-white  shadow-md shadow-gray-500 hover:text-white '> <span className='text-blue-600 text-xl pr-2'><FaGithub></FaGithub></span>Github</button>
           </div>
         </div>
 
