@@ -3,9 +3,15 @@ import { AuthContaxt } from '../Provider/AuthProviders';
 import { NavLink, Navigate, useLocation } from 'react-router-dom';
 
 const Private = ({children}) => {
+
    const location = useLocation()
    console.log(location)
-const {user} = useContext(AuthContaxt)
+const {user,loading} = useContext(AuthContaxt)
+if(loading){
+   return <div className='flex min-h-screen flex-col justify-center items-center text-red-700'>
+      <progress className="progress w-56"></progress>
+   </div>
+}
 if(user){
    return children
 }

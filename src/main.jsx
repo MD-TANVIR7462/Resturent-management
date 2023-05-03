@@ -13,6 +13,7 @@ import ViewRecipies from './components/ViewRecipies/ViewRecipies.jsx';
 import Error from './components/Error/Error.jsx';
 import AuthProviders from './components/Provider/AuthProviders.jsx';
 import Private from './components/PrivateRoute/Private.jsx';
+import Blog from './components/blog/Blog.jsx';
 
 
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path:'/viewrecipies/:id',
         element:<Private><ViewRecipies></ViewRecipies></Private>,
         loader:({params})=>{return fetch(`https://ass-10-server-mdtanvir7462-gmailcom.vercel.app/${params.id}`)}
+      },
+      {
+        path:'/blogs',
+        element:<Blog></Blog>
       },
     ]
   },

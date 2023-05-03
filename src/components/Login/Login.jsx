@@ -47,7 +47,7 @@ const navigate = useNavigate()
   const googleSign = () => {
     google()
       .then(result => {
-
+        navigate(mainlocation)
       })
       .catch(error => {
 
@@ -56,7 +56,7 @@ const navigate = useNavigate()
   const GithubSign = () => {
     Github()
       .then(result => {
-
+        navigate(mainlocation)
       })
       .catch(error => {
 
