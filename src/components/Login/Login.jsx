@@ -1,14 +1,19 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithubAlt } from 'react-icons/fa';
 import { AuthContaxt } from '../Provider/AuthProviders';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
-  const { signin,google,Github } = useContext(AuthContaxt)
+  const { signin, google, Github } = useContext(AuthContaxt)
   const [error, seterror] = useState('')
+  const location = useLocation()
+  const mainlocation = location.state?.from?.pathname || '/'
+const navigate = useNavigate()
+
 
   const loginAccaount = (e) => {
+   
     e.preventDefault()
     const from = e.target
     const email = from.email.value
@@ -24,36 +29,39 @@ const Login = () => {
           draggable: true,
           progress: undefined,
           theme: "dark",
-          
+
+
         });
+        navigate(mainlocation)
         from.reset()
         seterror('')
+
       })
-.catch((error)=>{
-  seterror(error.message)
-  from.reset()
-})
+      .catch((error) => {
+        seterror(error.message)
+        from.reset()
+      })
 
   }
 
-const googleSign =()=>{
-  google()
-  .then(result=>{
-   
-  })
-  .catch(error=>{
-   
-  })
-}
-const GithubSign =()=>{
-  Github()
-  .then(result=>{
-   
-  })
-  .catch(error=>{
-   
-  })
-}
+  const googleSign = () => {
+    google()
+      .then(result => {
+
+      })
+      .catch(error => {
+
+      })
+  }
+  const GithubSign = () => {
+    Github()
+      .then(result => {
+
+      })
+      .catch(error => {
+
+      })
+  }
 
 
   return (
@@ -87,11 +95,11 @@ const GithubSign =()=>{
                 <button className="btn btn-primary">Login</button>
               </div>
 
-<p className='text-red-700'>
-  {
-    error?error:''
-  }
-</p>
+              <p className='text-red-700'>
+                {
+                  error ? error : ''
+                }
+              </p>
             </div>
           </form >
           <p className='text-center mb-5'>Or Sign Up With</p>

@@ -4,7 +4,7 @@ import { FaHome,FaBloggerB,FaSignInAlt } from 'react-icons/fa';
 import { AuthContaxt } from '../Provider/AuthProviders';
 const Nav = () => {
   const {user,logOut}=useContext(AuthContaxt)
-console.log(user)
+
 const signout=()=>{
   logOut()
 }
