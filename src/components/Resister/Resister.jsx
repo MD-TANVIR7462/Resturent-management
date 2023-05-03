@@ -3,11 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContaxt } from '../Provider/AuthProviders';
 import { ToastContainer, toast } from 'react-toastify';
 import { getAuth, updateProfile } from "firebase/auth";
+import app from '../Firebase/firebase';
 
 const Resister = () => {
-  const [error, seterror] = useState('')
-  const auth = getAuth();
-  const { CreatUser,update } = useContext(AuthContaxt)
+  const [error, seterror,] = useState('')
+  const auth = getAuth(app);
+  const { CreatUser,update,logOut } = useContext(AuthContaxt)
   const navigate = useNavigate()
   const signup = (event) => {
     event.preventDefault()
@@ -21,18 +22,20 @@ const Resister = () => {
 
     CreatUser(email, password)
       .then((result) => {
-        
-        updateProfile(auth.currentUser,{
-          displayName : name,
-          photoURL: Img
-        })
+
+       
+        // updateProfile(auth.currentUser,{
+        //   displayName : name,
+        //   photoURL: Img
+        // })
+        update(name,Img)
         .then(()=>{
           console.log('updated')
         })
         .catch((error) => {
           console.log(error)
         });
-
+        logOut()
         toast.success('🦄 Accaount Creat Successfully!', {
           position: "top-center",
           autoClose: 300,
@@ -43,7 +46,7 @@ const Resister = () => {
           progress: undefined,
           theme: "dark",
         });
-        navigate('/')
+        navigate('/login')
         form.reset()
       })
 
@@ -91,7 +94,7 @@ const Resister = () => {
               </label>
               <input type="password" required placeholder="password" name='pass' className="input input-bordered" />
               <label className="label">
-                <Link to={'/login'}><p className="label-text-alt link link-hover">Already Have an Accaount?Login</p>
+                <Link to={'/login'}><p className="label-text-alt link text-blue-500 link-hover">Already Have an Accaount? Login</p>
                 </Link>
               </label>
             </div>

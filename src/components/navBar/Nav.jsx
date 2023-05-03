@@ -26,7 +26,7 @@ const signout=()=>{
           </div>
           <Link to={'/'} className=" font-bold  text-base md:text-3xl"><span className='text-pink-800' >Indian  </span> Cafe</Link>
           {/* The best of traditional Indian food */}
-       <link></link>
+       
         </div>
         <div className="navbar-center hidden lg:flex text-lg ">
           <ul className="menu menu-horizontal  font-bold mx-5">
@@ -46,16 +46,15 @@ const signout=()=>{
       //   </div>
       // </label>
 
-      user?<div className="dropdown dropdown-end" title={user?.displayName}>
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+      user?<div className="flex justify-center gap-4" >
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar"title={user.displayName?user.displayName:'No-Name'}>
         <div className="w-10 rounded-full">
-          <img src={user.photoURL} />
+          <img src={user.photoURL?user.photoURL:'img-Crack'} />
         </div>
       </label>
-      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-        <li><Link  onClick={signout} >Logout</Link></li>
-      </ul>
+     <Link  onClick={signout} > <button type="button" className="text-xs md:text-xs btn border-none  rounded-xl text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950">Logout</button></Link>
     </div>
+  
       :
 <Link to={'/login'}><button type="button" className="text-xs md:text-base btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950">Login</button></Link>
        }

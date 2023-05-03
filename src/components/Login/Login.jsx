@@ -5,7 +5,7 @@ import { AuthContaxt } from '../Provider/AuthProviders';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
-  const { signin } = useContext(AuthContaxt)
+  const { signin,google,Github } = useContext(AuthContaxt)
   const [error, seterror] = useState('')
 
   const loginAccaount = (e) => {
@@ -35,6 +35,27 @@ const Login = () => {
 })
 
   }
+
+const googleSign =()=>{
+  google()
+  .then(result=>{
+   
+  })
+  .catch(error=>{
+   
+  })
+}
+const GithubSign =()=>{
+  Github()
+  .then(result=>{
+   
+  })
+  .catch(error=>{
+   
+  })
+}
+
+
   return (
     <div className="hero  min-h-screen  bg-gradient-to-r from-purple-600  to-pink-300">
       <div className="hero-content flex-col ">
@@ -59,7 +80,7 @@ const Login = () => {
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
                 <label className="label">
-                  <Link to={'/resister'}><p className=" label-text-alt link link-hover">New here? Resister first..</p></Link>
+                  <Link to={'/resister'}><p className=" label-text-alt link link-hover text-green-600">New here? Resister first..</p></Link>
                 </label>
               </div>
               <div className="form-control mt-3">
@@ -75,9 +96,9 @@ const Login = () => {
           </form >
           <p className='text-center mb-5'>Or Sign Up With</p>
           <div className='flex justify-center gap-5'>
-            <button className='btn w-[120px] bg-gray-100 border-none text-black  shadow-md shadow-gray-500 hover:text-black hover:bg-white '><span className='text-green-600 text-xl pr-2'><FaGoogle></FaGoogle></span> Google</button>
+            <button onClick={googleSign} className='btn w-[120px] bg-gray-100 border-none text-black  shadow-md shadow-gray-500 hover:text-black hover:bg-white '><span className='text-green-600 text-xl pr-2'><FaGoogle></FaGoogle></span> Google</button>
 
-            <button className='w-[120px] btn  bg-gray-700 border-none text-white  shadow-md shadow-gray-500 hover:text-white '> <span className='text-blue-600 text-xl pr-2'><FaGithubAlt></FaGithubAlt></span>Github</button>
+            <button onClick={GithubSign} className='w-[120px] btn  bg-gray-700 border-none text-white  shadow-md shadow-gray-500 hover:text-white '> <span className='text-blue-600 text-xl pr-2'><FaGithubAlt></FaGithubAlt></span>Github</button>
           </div>
         </div>
 
