@@ -6,7 +6,7 @@ const Footer = () => {
          <footer className="footer p-10 bg-base-300 text-base-content ">
   <div>
     <span className="footer-title">Services</span> 
-    <a className="link link-hover">Organaigarion</a> 
+    <a className="link link-hover">Organaigation</a> 
     <a className="link link-hover">weadding Recipes</a> 
     <a className="link link-hover">Open Days</a> 
     <a className="link link-hover">Off Days</a>

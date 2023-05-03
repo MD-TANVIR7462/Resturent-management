@@ -43,7 +43,7 @@ const success =()=>{
                <div className="card-actions  justify-center pt-3 flex ">
                   <p><span className='font-bold '>Rarings :</span> {rating}</p>
 
-                  <button type="button" onClick={success} disabled={disable} className=" text-xs md:text-sm btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950" ><FaHeart></FaHeart> Favourite</button>
+                  <button type="button" onClick={success} disabled={disable} className="  text-2xl btn border-none px-4 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950" ><FaHeart></FaHeart> </button>
                </div>
             </div>
          </div>
