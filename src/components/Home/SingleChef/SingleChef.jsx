@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const SingleChef = ({ chef }) => {
    const { chefName, chefPicture, yearsOfExperience, numberOfRecipes, likes, id } = chef
-   console.log(chef)
+  //  console.log(chef)
    const navigate = useNavigate()
    const View=()=>{
     navigate(`/viewrecipies/${id}`)

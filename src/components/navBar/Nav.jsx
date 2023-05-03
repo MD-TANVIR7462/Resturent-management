@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaHome,FaBloggerB,FaSignInAlt } from 'react-icons/fa';
+import { AuthContaxt } from '../Provider/AuthProviders';
 const Nav = () => {
-   const user = false
+  const {user,logOut}=useContext(AuthContaxt)
+console.log(user)
+const signout=()=>{
+  logOut()
+}
    return (
       <div className='bg-slate-50'>
          
@@ -41,15 +46,14 @@ const Nav = () => {
       //   </div>
       // </label>
 
-      user?<div className="dropdown dropdown-end" title='MD-Tanvir'>
+      user?<div className="dropdown dropdown-end" title={user?.displayName}>
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="https://i.ibb.co/X5Zdcgp/man.png" />
+          <img src={user.photoURL} />
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><Link  onClick={signout} >Logout</Link></li>
       </ul>
     </div>
       :

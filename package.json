@@ -32,5 +32,17 @@
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.2"
-  }
+  },
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-MD-TANVIR7462.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-MD-TANVIR7462/issues"
+  },
+  "homepage": "https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-MD-TANVIR7462#readme",
+  "description": ""
 }
