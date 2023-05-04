@@ -8,7 +8,7 @@ import app from '../Firebase/firebase.init';
 const Resister = () => {
   const [error, seterror,] = useState('')
   const auth = getAuth(app);
-  const { CreatUser,update,logOut } = useContext(AuthContaxt)
+  const { CreatUser, update, logOut } = useContext(AuthContaxt)
   const navigate = useNavigate()
   const signup = (event) => {
     event.preventDefault()
@@ -23,18 +23,15 @@ const Resister = () => {
     CreatUser(email, password)
       .then((result) => {
 
-       
-        // updateProfile(auth.currentUser,{
-        //   displayName : name,
-        //   photoURL: Img
-        // })
-        update(name,Img)
-        .then(()=>{
-          console.log('updated')
-        })
-        .catch((error) => {
-          console.log(error)
-        });
+
+
+        update(name, Img)
+          .then(() => {
+            console.log('updated')
+          })
+          .catch((error) => {
+            console.log(error)
+          });
         logOut()
         toast.success('🦄 Accaount Creat Successfully!', {
           position: "top-center",
@@ -51,17 +48,28 @@ const Resister = () => {
       })
 
 
-      .catch((error)=>{
+      .catch((error) => {
         seterror(error.message)
         from.reset()
       })
 
-
-    
-
-
-
   }
+  const handleEmail = (e) => {
+    const emailInput = e.target.value;
+    
+    if (
+
+      !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(gmail)+(?:\.com)*$/.test(
+        emailInput
+      )
+    ) {
+      seterror("Please provide a valid email");
+     
+    } else {
+      seterror("");
+    }
+  };
+
   return (
     <div className="hero min-h-screen  bg-zinc-100">
       <div className="hero-content flex-col ">
@@ -86,7 +94,7 @@ const Resister = () => {
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input type="email" name='email' required placeholder="Your email" className="input input-bordered" />
+              <input type="email" onChange={handleEmail} name='email' required placeholder="Your email" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
@@ -99,11 +107,11 @@ const Resister = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-            <p className='text-red-700 mb-5'>
-  {
-    error?error:''
-  }
-</p>
+              <p className='text-red-700 mb-5'>
+                {
+                  error ? error : ''
+                }
+              </p>
               <button className="btn btn-primary">Resister</button>
             </div>
           </div>
