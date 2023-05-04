@@ -1,8 +1,11 @@
 import React from 'react';
+import Pdf from "react-to-pdf";
 
 const Blog = () => {
+   const ref = React.createRef();
    return (
-      <div className='my-16'>
+      <div>
+      <div className='mt-16 mb-8'ref={ref} >
 
          <p className='text-center text-4xl mt-16  font-bold text-pink-800 '>BLOGS</p>
          <p className='text-center font-medium text-gray-600  mb-6'>Here Some BLogs About Our Resturant And Some Questions Answer !! </p>
@@ -68,10 +71,15 @@ const Blog = () => {
             </div>
          </div>
 
+        
 
 
 
-
+      </div>
+      <Pdf targetRef={ref} filename="code-example.pdf" >
+        {({ toPdf }) => <div className='text-center mb-5'>
+        <button className="text-xs md:text-base btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950 " onClick={toPdf}>Generate Pdf</button></div>}
+      </Pdf>
       </div>
    );
 };

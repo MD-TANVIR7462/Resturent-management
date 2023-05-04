@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { useNavigate } from 'react-router-dom';
 
 const SingleChef = ({ chef }) => {
@@ -12,7 +13,9 @@ const SingleChef = ({ chef }) => {
    return (
       <>
 <div className="card md:w-80 bg-base-100 shadow-xl">
-  <figure><img src={chefPicture} alt="Shoes" /></figure>
+ <LazyLoad>
+ <figure><img src={chefPicture} alt="Shoes" /></figure>
+ </LazyLoad>
   <div className="card-body">
     <h2 className="md:card-title text-lg"><span className='font-bold text-gray-600'>Name :</span> {chefName}</h2>
     <p className='font-medium' ><span className='font-bold text-gray-600'>Experience</span > : {yearsOfExperience} Years</p>

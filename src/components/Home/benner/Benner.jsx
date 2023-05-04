@@ -1,9 +1,11 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 
 const Benner = () => {
    return (
       <div>
-         <div className="hero h-[550px]" style={{ backgroundImage: `url("https://i.ibb.co/bHqvnzs/pexels-photo-1267320.jpg")` }}>
+      <LazyLoad>
+      <div className="hero h-[550px]" style={{ backgroundImage: `url("https://i.ibb.co/bHqvnzs/pexels-photo-1267320.jpg")` }}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
@@ -13,6 +15,7 @@ const Benner = () => {
     </div>
   </div>
 </div>
+      </LazyLoad>
       </div>
    );
 };
