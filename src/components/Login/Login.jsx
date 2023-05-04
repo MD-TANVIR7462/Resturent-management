@@ -65,10 +65,10 @@ const navigate = useNavigate()
 
 
   return (
-    <div className="hero  min-h-screen  bg-gradient-to-r from-purple-600  to-pink-300">
+    <div className="hero  min-h-screen  bg-zinc-100">
       <div className="hero-content flex-col ">
         <div className="text-center ">
-          <h1 className="text-5xl font-bold text-white mb-5">Login now!</h1>
+          <h1 className="text-5xl font-bold text-black mb-5 ">Login now!</h1>
         </div>
         <div className="card flex-shrink-0 pb-14 md:w-[450px] w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={loginAccaount} >

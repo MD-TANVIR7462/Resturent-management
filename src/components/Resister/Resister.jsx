@@ -63,10 +63,10 @@ const Resister = () => {
 
   }
   return (
-    <div className="hero min-h-screen  bg-gradient-to-r from-purple-600  to-pink-300">
+    <div className="hero min-h-screen  bg-zinc-100">
       <div className="hero-content flex-col ">
         <div className="text-center ">
-          <h1 className="text-5xl text-white font-bold">Resister now!</h1>
+          <h1 className="text-5xl text-black font-bold">Resister now!</h1>
         </div>
         <form className="card  md:w-[450px] shadow-2xl bg-base-100" onSubmit={signup}>
           <div className="card-body">

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LazyLoad from 'react-lazy-load';
 
 const Benner = () => {
+  const []=useState([])
    return (
       <div>
       <LazyLoad>

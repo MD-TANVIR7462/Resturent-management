@@ -16,7 +16,7 @@ const ViewRecipies = () => {
             <div className="hero-content flex-col lg:flex-row gap-11">
                <LazyLoad>
              
-               <img src={chefPicture} className=" max-w-xl   rounded-lg shadow-2xl" />
+               <img src={chefPicture} className=" md:max-w-xl   rounded-lg shadow-2xl" />
                  
                </LazyLoad>
                 

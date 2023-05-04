@@ -9,9 +9,9 @@ const signout=()=>{
   logOut()
 }
    return (
-      <div className='bg-slate-50'>
+      <div >
          
-        <div className="navbar  px-2 md:px-28  h-20    ">      
+        <div className="navbar  px-2 md:px-28  md:h-32    ">      
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +29,7 @@ const signout=()=>{
        
         </div>
         <div className="navbar-center hidden lg:flex text-lg ">
-          <ul className="menu menu-horizontal  font-bold mx-5">
+          <ul className="menu menu-horizontal  font-normal mx-5">
             <NavLink to={'/'} className={({ isActive }) => isActive ? ' text-pink-800 mr-5 flex  items-center' : 'text-black mr-5 flex  items-center'}><FaHome></FaHome> Home</NavLink>
 
             <NavLink to={'/Blogs'} className={({ isActive }) => isActive ? " text-pink-800 pl-4 flex  items-center" : "'text-black  pl-5 flex  items-center "}> <FaBloggerB></FaBloggerB> Blog</NavLink >

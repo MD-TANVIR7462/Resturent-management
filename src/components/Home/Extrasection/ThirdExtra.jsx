@@ -3,7 +3,7 @@ import { FaWifi,FaMugHot,FaGrin ,FaGripfire} from 'react-icons/fa';
 
 const ThirdExtra = () => {
    return (
-      <div className=''>
+      <div className='my-32'>
          <p className='text-center text-4xl mt-16  font-bold '>some Details</p>
          <div className="hero mt-4   md:h-[550px] md:py-8 md:px-14  bg-base-200  ">
 
