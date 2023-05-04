@@ -54,21 +54,7 @@ const Resister = () => {
       })
 
   }
-  const handleEmail = (e) => {
-    const emailInput = e.target.value;
-    
-    if (
 
-      !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(gmail)+(?:\.com)*$/.test(
-        emailInput
-      )
-    ) {
-      seterror("Please provide a valid email");
-     
-    } else {
-      seterror("");
-    }
-  };
 
   return (
     <div className="hero min-h-screen  bg-zinc-100">
@@ -94,7 +80,7 @@ const Resister = () => {
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input type="email" onChange={handleEmail} name='email' required placeholder="Your email" className="input input-bordered" />
+              <input type="email"  name='email' required placeholder="Your email" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
