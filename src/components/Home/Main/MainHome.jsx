@@ -12,7 +12,7 @@ const MainHome = () => {
       setSpiner(true)
       setTimeout(() => {
          setSpiner(false)
-      }, 160);
+      }, 80);
 
 
 
