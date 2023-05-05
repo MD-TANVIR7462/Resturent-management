@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Pdf from "react-to-pdf";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Blog = () => {
    const ref = React.createRef();
+   const [spiner, setSpiner] = useState(false)
+   useEffect(() => {
+      setSpiner(true)
+      setTimeout(() => {
+         setSpiner(false)
+      }, 120);
+
+
+
+   }, [])
+   
    return (
       <div>
+      {
+         spiner? <div className='flex justify-center '>
+               <ClipLoader
+
+                  color={"#36d7b7"}
+                  loading={true}
+                  size={120}
+                  speedMultiplier
+
+               />
+            </div>
+             :
+         <div>
       <div className='mt-16 mb-8'ref={ref} >
 
          <p className='text-center text-4xl mt-16  font-bold text-pink-800 '>BLOGS</p>
@@ -81,7 +106,10 @@ const Blog = () => {
         <button className="text-xs md:text-base btn border-none px-5 py-3 rounded-lg text-white font-bold  bg-gradient-to-r from-pink-400 to-purple-900 hover:from-pink-500 hover:to-indigo-950 " onClick={toPdf}>Generate Pdf</button></div>}
       </Pdf>
       </div>
+      }
+      </div>
    );
 };
+
 
 export default Blog;

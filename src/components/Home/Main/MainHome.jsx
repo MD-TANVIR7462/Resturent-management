@@ -12,7 +12,7 @@ const MainHome = () => {
       setSpiner(true)
       setTimeout(() => {
          setSpiner(false)
-      }, 80);
+      }, 120);
 
 
 
@@ -26,7 +26,7 @@ const MainHome = () => {
 
                   color={"#36d7b7"}
                   loading={true}
-                  size={100}
+                  size={120}
                   speedMultiplier
 
                />
